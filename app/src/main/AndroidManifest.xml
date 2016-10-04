@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.feicui.myintent">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+
+
+        <activity android:name=".Main2Activity">
+            <intent-filter>
+                <action android:name="com.feicui.myintent" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+
+
+        <activity
+            android:name=".Main3Activity"
+            android:taskAffinity="com.feicui.ddd">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <data
+                    android:host="aa.bb"
+                    android:scheme="znn" />
+                <!-- <data android:scheme="http" android:host="www.csdn.net" /> -->
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+        </activity>
+
+
+
+        <activity
+            android:name=".Main4Activity"
+            android:taskAffinity="com.feicui.ddd">
+        </activity>
+
+
+
+        <activity android:name=".IntentTestActivity">
+
+        </activity>
+
+
+    </application>
+
+</manifest>
